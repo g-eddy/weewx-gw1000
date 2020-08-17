@@ -437,7 +437,7 @@ except ImportError:
         log_traceback(prefix=prefix, loglevel=syslog.LOG_DEBUG)
 
 DRIVER_NAME = 'GW1000'
-DRIVER_VERSION = '0.1.0b11'
+DRIVER_VERSION = '0.1.0b11-1'
 
 # various defaults used throughout
 # default port used by GW1000
@@ -876,7 +876,7 @@ class Gw1000(object):
             if self.debug_rain > 0:
                 loginf("calculate_rain: last_rain=%s new_total=%s calculated rain=%s" % (self.last_rain,
                                                                                          new_total,
-                                                                                         new_total))
+                                                                                         data['rain']))
             # save the new total as the old total for next time
             self.last_rain = new_total
 
